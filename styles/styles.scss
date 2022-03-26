@@ -20,6 +20,7 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
   --padding-inner: 1.5rem;
   --transition-all: all 0.2s ease-in-out;
+  --transition-more: all 0.4s ease-in-out;
 }
 body {
   font-family: "Poppins", sans-serif;
@@ -393,6 +394,152 @@ section {
         color: var(--color-gray-3);
       }
     }
+  }
+}
+
+// portfolio section
+
+.p-text {
+  margin-top: 3rem;
+}
+.portfolios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+  .portfolio-item {
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .hover-items {
+      opacity: 0;
+      transition: var(--transition-more);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 97%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--color-secondary);
+      border-radius: 8px;
+      h3 {
+        font-size: 1.5rem;
+        color: var(--color-white);
+        margin-bottom: 1.5rem;
+      }
+      .icon {
+        background-color: var(--color-primary);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+        cursor: pointer;
+        transition: var(--transition-more);
+        i {
+          font-size: 1.5rem;
+          color: var(--color-white);
+          margin: 0 1rem;
+        }
+        &:hover {
+          background-color: var(--color-white);
+          i {
+            color: var(--color-primary);
+          }
+        }
+      }
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+  }
+}
+
+// contact and curriculum vitae
+.p-contact {
+  transform: translateX(-50px);
+  .pop-contact {
+    color: var(--color-secondary);
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+.contactResume {
+  position: relative;
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 20;
+    display: none;
+    justify-content: center;
+
+    .overlay-container {
+      margin-top: 13%;
+      width: 450px;
+      height: 250px;
+      background-color: var(--color-white);
+      border-radius: 7px;
+      color: black;
+      padding: 12px;
+      .overlay-item {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        gap: 8px;
+        .close-overlay {
+          color: rgb(255, 113, 113);
+          padding-left: 2px;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+.head-btn {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.embed-cv {
+  // width: 100%;
+
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
+  // position: relative;
+  height: 250vh;
+  width: auto;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    display: block;
+    overflow: hidden;
+    padding: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
 }
 

@@ -2,6 +2,10 @@ const sections = document.querySelectorAll(".section");
 const sectBtns = document.querySelectorAll(".control");
 const controls = document.querySelector(".controls");
 const allSections = document.querySelector(".main-container");
+const overlay = document.querySelector(".overlay");
+const overlayContainer = document.querySelector(".overlay-container");
+const contactBtn = document.querySelector(".pop-contact");
+const contactSec = document.querySelector(".contactResume");
 
 function pageTransition() {
   // for the controls button
@@ -21,7 +25,6 @@ function pageTransition() {
       element.classList.add("active");
     });
   }
-
   // just incase an error occur
   // allSections.addEventListener("click", function (e) {
   //   // console.log(e.target);
@@ -33,5 +36,21 @@ function pageTransition() {
   //   element.classList.add("active");
   // });
 }
-
 pageTransition();
+
+// add onclick event to contact button
+contactSec.addEventListener("click", (e) => {
+  if (
+    e.target.className === "pop-contact" ||
+    e.target.className === "overlay-container" ||
+    e.target.className == "overlay-item" ||
+    e.target.className == "oc-left" ||
+    e.target.className == "oc-right"
+  ) {
+    overlay.style.display = "flex";
+    // overlay.style.jusifyContent = "center";
+    // overlay.style.alignItem = "center";
+  } else {
+    overlay.style.display = "none";
+  }
+});

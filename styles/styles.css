@@ -22,6 +22,7 @@
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
   --padding-inner: 1.5rem;
   --transition-all: all 0.2s ease-in-out;
+  --transition-more: all 0.4s ease-in-out;
 }
 
 body {
@@ -551,6 +552,192 @@ section {
 
 .about-stats .timeline .timeline-item p {
   color: var(--color-gray-3);
+}
+
+.p-text {
+  margin-top: 3rem;
+}
+
+.portfolios {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.portfolios .portfolio-item {
+  position: relative;
+}
+
+.portfolios .portfolio-item img {
+  width: 100%;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+}
+
+.portfolios .portfolio-item .hover-items {
+  opacity: 0;
+  -webkit-transition: var(--transition-more);
+  transition: var(--transition-more);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 97%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--color-secondary);
+  border-radius: 8px;
+}
+
+.portfolios .portfolio-item .hover-items h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin-bottom: 1.5rem;
+}
+
+.portfolios .portfolio-item .hover-items .icon {
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1rem;
+  cursor: pointer;
+  -webkit-transition: var(--transition-more);
+  transition: var(--transition-more);
+}
+
+.portfolios .portfolio-item .hover-items .icon i {
+  font-size: 1.5rem;
+  color: var(--color-white);
+  margin: 0 1rem;
+}
+
+.portfolios .portfolio-item .hover-items .icon:hover {
+  background-color: var(--color-white);
+}
+
+.portfolios .portfolio-item .hover-items .icon:hover i {
+  color: var(--color-primary);
+}
+
+.portfolios .portfolio-item .hover-items:hover {
+  opacity: 0.9;
+}
+
+.p-contact {
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+.p-contact .pop-contact {
+  color: var(--color-secondary);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.contactResume {
+  position: relative;
+}
+
+.contactResume .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contactResume .overlay .overlay-container {
+  margin-top: 13%;
+  width: 450px;
+  height: 250px;
+  background-color: var(--color-white);
+  border-radius: 7px;
+  color: black;
+  padding: 12px;
+}
+
+.contactResume .overlay .overlay-container .overlay-item {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 3fr;
+      grid-template-columns: 1fr 3fr;
+  gap: 8px;
+}
+
+.contactResume .overlay .overlay-container .overlay-item .close-overlay {
+  color: #ff7171;
+  padding-left: 2px;
+  cursor: pointer;
+}
+
+.head-btn {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.embed-cv {
+  height: 250vh;
+  width: auto;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.embed-cv iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+  padding: 80px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .main-btn {
