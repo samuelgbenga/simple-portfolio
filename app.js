@@ -45,7 +45,8 @@ contactSec.addEventListener("click", (e) => {
     e.target.className === "overlay-container" ||
     e.target.className == "overlay-item" ||
     e.target.className == "oc-left" ||
-    e.target.className == "oc-right"
+    e.target.className == "oc-right" ||
+    e.target.className == "social-link"
   ) {
     overlay.style.display = "flex";
     // overlay.style.jusifyContent = "center";

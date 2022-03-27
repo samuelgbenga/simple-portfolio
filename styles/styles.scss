@@ -434,28 +434,35 @@ section {
       h3 {
         font-size: 1.5rem;
         color: var(--color-white);
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
       }
       .icon {
-        background-color: var(--color-primary);
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 7px;
         margin: 0 1rem;
         cursor: pointer;
         transition: var(--transition-more);
-        i {
-          font-size: 1.5rem;
-          color: var(--color-white);
-          margin: 0 1rem;
-        }
-        &:hover {
-          background-color: var(--color-white);
+        a {
+          background-color: var(--color-primary);
+          width: 50px;
+          height: 50px;
+          border-radius: 50px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           i {
-            color: var(--color-primary);
+            font-size: 1.5rem;
+            color: var(--color-white);
+            margin: 0 1rem;
+          }
+          &:hover {
+            background-color: var(--color-white);
+            i {
+              color: var(--color-primary);
+            }
           }
         }
       }
@@ -484,7 +491,7 @@ section {
     width: 100%;
     height: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.97);
     z-index: 20;
     display: none;
     justify-content: center;
@@ -493,19 +500,49 @@ section {
       margin-top: 13%;
       width: 450px;
       height: 250px;
-      background-color: var(--color-white);
+      border: solid 2px white;
       border-radius: 7px;
-      color: black;
+      color: var(--color-black);
       padding: 12px;
-      .overlay-item {
+      background: var(--color-white);
+      position: fixed;
+
+      &::before {
+        position: absolute;
+        content: "";
+        background: inherit;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        pointer-events: none;
+        // box-shadow: inset 0 0 0 000px rgba(150, 150, 150, 0.192);
+        filter: blur(90px);
+        border-radius: 7px;
+      }
+      .overlay-col-item {
         display: grid;
         grid-template-columns: 1fr 3fr;
         gap: 8px;
-        .close-overlay {
-          color: rgb(255, 113, 113);
-          padding-left: 2px;
-
-          cursor: pointer;
+      }
+      .close-overlay {
+        color: rgb(255, 113, 113);
+        padding-left: 2px;
+        cursor: pointer;
+      }
+      .span {
+        margin-top: 10px;
+      }
+      .overlay-block-item {
+        font-size: 13px;
+        color: #087ccc;
+        font-weight: 600;
+        margin-bottom: 8px;
+        .social-link {
+          &:hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
         }
       }
     }
