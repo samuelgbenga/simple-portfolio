@@ -297,7 +297,7 @@ section {
   display: grid;
   -ms-grid-columns: 3fr 1fr;
       grid-template-columns: 3fr 1fr;
-  padding-top: 3rem;
+  padding-top: 1rem;
   gap: 3rem;
 }
 
@@ -354,7 +354,6 @@ section {
   text-transform: uppercase;
   font-size: 1.2rem;
   color: var(--color-gray-2);
-  letter-spacing: 2px;
 }
 
 .about-container .right-about .about-item .about-text .small-text::before {
@@ -768,10 +767,8 @@ section {
 }
 
 .head-btn {
-  margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  margin-top: 10px;
+  display: block;
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
@@ -896,7 +893,6 @@ section {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
-    font-size: 12px;
     padding: 50px 0;
     overflow-y: scroll;
   }
@@ -917,7 +913,6 @@ section {
   .about-container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    font-size: 11px;
   }
   .about-stats .progress-bars {
     -ms-grid-columns: 1fr;
@@ -927,6 +922,28 @@ section {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     padding-left: 20px;
+  }
+  .p-text {
+    margin-top: 1rem;
+  }
+  .portfolios {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .portfolios img {
+    height: 250px !important;
+  }
+  .portfolios .hover-items {
+    height: 97.5% !important;
+  }
+  .p-contact {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    text-align: center !important;
+    width: 100%;
+  }
+  .head-btn {
+    display: block;
   }
   section {
     padding: 2rem 1.5rem;

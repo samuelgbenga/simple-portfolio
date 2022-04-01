@@ -3,7 +3,7 @@
   .head-content {
     display: flex;
     flex-direction: column-reverse;
-    font-size: 12px;
+
     padding: 50px 0;
 
     overflow-y: scroll;
@@ -26,7 +26,6 @@
   // about section
   .about-container {
     grid-template-columns: 1fr;
-    font-size: 11px;
   }
   // about stats
   .about-stats {
@@ -37,6 +36,28 @@
       grid-template-columns: 1fr;
       padding-left: 20px;
     }
+  }
+  // portfolio
+  .p-text {
+    margin-top: 1rem;
+  }
+  .portfolios {
+    grid-template-columns: 1fr;
+    img {
+      height: 250px !important;
+    }
+    .hover-items {
+      height: 97.5% !important;
+    }
+  }
+  // cv/resume
+  .p-contact {
+    transform: translateX(0);
+    text-align: center !important;
+    width: 100%;
+  }
+  .head-btn {
+    display: block;
   }
   //all sections
   section {

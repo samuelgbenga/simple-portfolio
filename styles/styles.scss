@@ -203,7 +203,7 @@ section {
 .about-container {
   display: grid;
   grid-template-columns: 3fr 1fr;
-  padding-top: 3rem;
+  padding-top: 1rem;
   gap: 3rem;
   .right-about {
     display: flex;
@@ -236,7 +236,7 @@ section {
           text-transform: uppercase;
           font-size: 1.2rem;
           color: var(--color-gray-2);
-          letter-spacing: 2px;
+
           &::before {
             content: "";
             position: absolute;
@@ -488,6 +488,7 @@ section {
 // contact and curriculum vitae
 .p-contact {
   transform: translateX(-50px);
+
   .pop-contact {
     color: var(--color-secondary);
     cursor: pointer;
@@ -561,8 +562,8 @@ section {
   }
 }
 .head-btn {
-  margin-top: 30px;
-  display: flex;
+  margin-top: 10px;
+  display: block;
   justify-content: space-evenly;
 }
 .embed-cv {
