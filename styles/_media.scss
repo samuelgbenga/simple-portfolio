@@ -1,0 +1,37 @@
+@media screen and (max-width: 600px) {
+  .head-content {
+    display: flex;
+    flex-direction: column-reverse;
+    font-size: 12px;
+    padding: 50px 0;
+    overflow-y: scroll;
+    .h-shape {
+      display: none;
+    }
+    .left-header {
+      margin: 0 20px !important;
+    }
+
+    .image {
+      border-radius: 18px !important;
+      margin-right: 0px !important;
+      img {
+        border-radius: 18px !important;
+        background-color: var(--color-white);
+      }
+    }
+  }
+
+  // controls
+  .controls {
+    display: flex;
+    flex-direction: row;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%);
+
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+  }
+}

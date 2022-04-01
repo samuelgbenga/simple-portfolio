@@ -22,6 +22,15 @@
   --transition-all: all 0.2s ease-in-out;
   --transition-more: all 0.4s ease-in-out;
 }
+[data-theme="dark"] {
+  --color-primary: #fff;
+  --color-white: #000;
+  --color-gray-4: var(--color-gray-2);
+  --color-gray-2: var(--color-gray-4);
+  --color-gray-0: var(--color-gray-6);
+  --color-gray-5: var(--color-gray-1);
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
@@ -101,7 +110,7 @@ section {
   .control {
     padding: 1rem;
     cursor: pointer;
-    background-color: var(--color-gray-4);
+    background-color: var(--color-gray-5);
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -111,8 +120,11 @@ section {
     box-shadow: var(--box-shadow-1);
     i {
       font-size: 1rem;
-      color: var(--color-grey-2);
+      color: var(--color-white);
       pointer-events: none;
+    }
+    &:active {
+      transform: translateY(-5px);
     }
   }
 }
@@ -223,7 +235,7 @@ section {
           position: relative;
           text-transform: uppercase;
           font-size: 1.2rem;
-          color: var(--color-gray-1);
+          color: var(--color-gray-2);
           letter-spacing: 2px;
           &::before {
             content: "";
@@ -647,3 +659,4 @@ section {
     }
   }
 }
+@import "./media";

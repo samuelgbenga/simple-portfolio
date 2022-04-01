@@ -6,10 +6,11 @@ const overlay = document.querySelector(".overlay");
 const overlayContainer = document.querySelector(".overlay-container");
 const contactBtn = document.querySelector(".pop-contact");
 const contactSec = document.querySelector(".contactResume");
+const toggleMode = document.querySelector("#toggle-mode");
 
 function pageTransition() {
   // for the controls button
-  for (let i = 0; i < sectBtns.length; i++) {
+  for (let i = 0; i < sectBtns.length - 1; i++) {
     sectBtns[i].addEventListener("click", function (e) {
       let currentBtn = document.querySelector(".active-btn");
       // currentBtn.className = currentBtn.className.replace("active-btn", "");
@@ -55,3 +56,18 @@ contactSec.addEventListener("click", (e) => {
     overlay.style.display = "none";
   }
 });
+
+// toggle dark mode
+toggleMode.innerHTML = `<i class="fa-solid fa-sun-bright">&#9728</i>`;
+let flag = 1;
+function toggleFunc() {
+  if (flag === 1) {
+    toggleMode.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+    document.documentElement.setAttribute("data-theme", "dark");
+    flag = 2;
+  } else {
+    toggleMode.innerHTML = `<i class="fa-solid fa-sun-bright">&#9728</i>`;
+    document.documentElement.setAttribute("data-theme", "light");
+    flag = 1;
+  }
+}

@@ -25,6 +25,15 @@
   --transition-more: all 0.4s ease-in-out;
 }
 
+[data-theme="dark"] {
+  --color-primary: #fff;
+  --color-white: #000;
+  --color-gray-4: var(--color-gray-2);
+  --color-gray-2: var(--color-gray-4);
+  --color-gray-0: var(--color-gray-6);
+  --color-gray-5: var(--color-gray-1);
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: var(--color-primary);
@@ -151,7 +160,7 @@ section {
 .controls .control {
   padding: 1rem;
   cursor: pointer;
-  background-color: var(--color-gray-4);
+  background-color: var(--color-gray-5);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -170,8 +179,13 @@ section {
 
 .controls .control i {
   font-size: 1rem;
-  color: var(--color-grey-2);
+  color: var(--color-white);
   pointer-events: none;
+}
+
+.controls .control:active {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
 }
 
 .head-content {
@@ -339,7 +353,7 @@ section {
   position: relative;
   text-transform: uppercase;
   font-size: 1.2rem;
-  color: var(--color-gray-1);
+  color: var(--color-gray-2);
   letter-spacing: 2px;
 }
 
@@ -871,5 +885,50 @@ section {
   font-size: 5rem;
   -webkit-transition: var(--transition-all);
   transition: var(--transition-all);
+}
+
+@media screen and (max-width: 600px) {
+  .head-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    font-size: 12px;
+    padding: 50px 0;
+    overflow-y: scroll;
+  }
+  .head-content .h-shape {
+    display: none;
+  }
+  .head-content .left-header {
+    margin: 0 20px !important;
+  }
+  .head-content .image {
+    border-radius: 18px !important;
+    margin-right: 0px !important;
+  }
+  .head-content .image img {
+    border-radius: 18px !important;
+    background-color: var(--color-white);
+  }
+  .controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    top: 0%;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
