@@ -1,9 +1,11 @@
 @media screen and (max-width: 600px) {
+  // head section
   .head-content {
     display: flex;
     flex-direction: column-reverse;
     font-size: 12px;
     padding: 50px 0;
+
     overflow-y: scroll;
     .h-shape {
       display: none;
@@ -21,7 +23,25 @@
       }
     }
   }
-
+  // about section
+  .about-container {
+    grid-template-columns: 1fr;
+    font-size: 11px;
+  }
+  // about stats
+  .about-stats {
+    .progress-bars {
+      grid-template-columns: 1fr;
+    }
+    .timeline {
+      grid-template-columns: 1fr;
+      padding-left: 20px;
+    }
+  }
+  //all sections
+  section {
+    padding: 2rem 1.5rem;
+  }
   // controls
   .controls {
     display: flex;
@@ -33,5 +53,20 @@
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
     width: 100%;
+  }
+  // main title
+  .main-title {
+    margin-top: 50px;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      span {
+        color: var(--color-secondary);
+      }
+      .bg-text {
+        font-weight: 800;
+        font-size: 2.5rem;
+      }
+    }
   }
 }
