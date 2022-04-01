@@ -1,25 +1,26 @@
 @media screen and (max-width: 600px) {
   // head section
   .head-content {
-    display: flex;
-    flex-direction: column-reverse;
-
+    grid-template-columns: 1fr;
     padding: 50px 0;
-
+    transform: translateY(0);
     overflow-y: scroll;
     .h-shape {
       display: none;
     }
+    .right-header {
+      grid-row: 1;
+      margin-top: 5px;
+    }
     .left-header {
       margin: 0 20px !important;
+      grid-row: 2;
     }
 
     .image {
-      border-radius: 18px !important;
       margin-right: 0px !important;
       img {
-        border-radius: 18px !important;
-        background-color: var(--color-white);
+        background-color: var(--color-secondary) !important;
       }
     }
   }
@@ -57,7 +58,18 @@
     width: 100%;
   }
   .head-btn {
-    display: block;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    .btn-cons {
+      align-self: center !important;
+    }
+  }
+  .embed-cv {
+    img {
+      width: 100%;
+    }
   }
   //all sections
   section {

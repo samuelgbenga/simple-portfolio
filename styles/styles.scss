@@ -16,6 +16,7 @@
   --color-gray-4: rgb(78, 78, 78);
   --color-gray-5: rgb(48, 48, 48);
   --color-gray-6: rgb(29, 29, 29);
+  --color-gray-7: rgb(15, 15, 15);
   --br-sm-2: 14px;
   --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.2);
   --padding-inner: 1.5rem;
@@ -25,10 +26,9 @@
 [data-theme="dark"] {
   --color-primary: #fff;
   --color-white: #000;
-  --color-gray-4: var(--color-gray-2);
-  --color-gray-2: var(--color-gray-4);
+  --color-gray-4: var(--color-gray-1);
   --color-gray-0: var(--color-gray-6);
-  --color-gray-5: var(--color-gray-1);
+  --color-gray-5: var(--color-gray-2);
 }
 
 body {
@@ -89,7 +89,7 @@ section {
 // controls
 .btn-cons {
   display: flex;
-  align-self: end;
+  align-self: center;
 }
 .controls {
   position: fixed;
@@ -120,7 +120,7 @@ section {
     box-shadow: var(--box-shadow-1);
     i {
       font-size: 1rem;
-      color: var(--color-white);
+      color: white;
       pointer-events: none;
     }
     &:active {
@@ -563,33 +563,19 @@ section {
 }
 .head-btn {
   margin-top: 10px;
-  display: block;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
 }
 .embed-cv {
-  // width: 100%;
-
-  // display: flex;
-  // align-items: center;
-  // justify-content: center;
-  // position: relative;
-  height: 250vh;
-  width: auto;
-  margin: 0 auto;
+  margin: 15px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  iframe {
-    display: block;
-    width: 100%;
-    height: 100%;
-
-    display: block;
-    overflow: hidden;
-    padding: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+  img {
+    width: 60%;
+    object-fit: contain;
+    border: solid var(--color-gray-5) 2px;
   }
 }
 
