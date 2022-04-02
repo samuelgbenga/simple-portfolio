@@ -128,7 +128,9 @@ section {
     }
   }
 }
-// header content
+// footer content
+
+// head content
 .head-content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -576,6 +578,29 @@ section {
     width: 60%;
     object-fit: contain;
     border: solid var(--color-gray-5) 2px;
+  }
+}
+//contact foot
+.contact-foot {
+  position: relative;
+  bottom: 0;
+
+  hr {
+    opacity: 0.1;
+    margin-top: 60px;
+    height: 0 !important;
+  }
+  .contact-content {
+    margin-top: 50px;
+    text-align: center;
+    color: var(--color-gray-3);
+
+    p {
+      font-size: 11px;
+      span {
+        white-space: nowrap;
+      }
+    }
   }
 }
 
